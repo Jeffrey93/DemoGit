@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.ActionLink("Mi about", "About", new {edad=48 }, new { @class = "btn btn-danger" })
+
+@Html.Display("Persona")
+@Html.Editor("Persona")
+
