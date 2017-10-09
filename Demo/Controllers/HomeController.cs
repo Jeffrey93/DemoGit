@@ -8,6 +8,7 @@ namespace Demo.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             var persona = new Persona()
@@ -21,6 +22,12 @@ namespace Demo.Controllers
             ViewBag.Persona = persona;
             ViewBag.MiListado = ObtenerListado();
             return View();
+        }
+        [HttpPost]
+        public ActionResult Index(Persona persona)
+        {
+            ViewBag.Message = "exitoso";
+            return View(persona);
         }
         public List<SelectListItem> ObtenerListado(){
             return new List<SelectListItem>()
