@@ -27,7 +27,7 @@ namespace Demo.Controllers
         public ActionResult Index(Persona persona)
         {
             ViewBag.Message = "exitoso";
-            return View(persona);
+            return View(persona);   
         }
         public List<SelectListItem> ObtenerListado(){
             return new List<SelectListItem>()
